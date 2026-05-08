@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables (NUNCA commitar tokens!)
+.env
+.env.local
+.env.production
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Playwright MCP browser session artifacts
+.playwright-mcp/
+
+# MCP config files may contain local secrets
+.mcp.json
+
+# Screenshots gerados pelo Windows (nome em formato UUID)
+{*}.png
+image.png
+
+# Local one-off operational scripts
+batch-*.ts
+*.local.ts
+
+# Codex project config (may contain local secrets)
+.codex/config.toml

@@ -2,7 +2,7 @@
 
 Servidor MCP (Model Context Protocol) para conectar o Codex ao Ekyte e operar tarefas, projetos, fases, usuarios, workspaces e apontamentos de horas por tools.
 
-Descricao sugerida para o GitHub:
+Descricão sugerida para o GitHub:
 
 ```text
 MCP Server do Ekyte para Codex: cria e atualiza tarefas/projetos, lista workspaces/usuarios/fases e gerencia apontamentos de horas via API interna do Ekyte.
@@ -15,7 +15,7 @@ MCP Server do Ekyte para Codex: cria e atualiza tarefas/projetos, lista workspac
 - Transporte remoto via HTTP em `/mcp` para deploy com Docker.
 - Health check HTTP em `/health`.
 - Skill do Codex inclusa em `codex/skills/ekyte`.
-- PRD de instalacao guiada em `PRD-INSTALACAO-MCP-EKYTE-CODEX.md`.
+- PRD de instalacão guiada em `PRD-INSTALAcão-MCP-EKYTE-CODEX.md`.
 
 ## Requisitos
 
@@ -23,10 +23,10 @@ MCP Server do Ekyte para Codex: cria e atualiza tarefas/projetos, lista workspac
 - `EKYTE_BEARER_TOKEN`: JWT Bearer copiado do header `Authorization`.
 - `EKYTE_COMPANY_ID`: ID numerico da empresa no caminho `/api/companies/XXXX/...`.
 - Codex CLI instalado para registrar o servidor MCP.
-- Node.js 18 ou superior para instalacao local.
-- Docker, dominio HTTPS e um host com porta 3000 disponivel para instalacao remota.
+- Node.js 18 ou superior para instalacão local.
+- Docker, dominio HTTPS e um host com porta 3000 disponivel para instalacão remota.
 
-## Instalacao Rapida
+## Instalação Rapida
 
 Clone o repositorio:
 
@@ -57,15 +57,15 @@ TRANSPORT=stdio
 PORT=3000
 ```
 
-## Guia de Instalacao no Codex
+## Guia de Instalacão no Codex
 
 O caminho recomendado e pedir para o Codex executar o PRD:
 
 ```text
-Executa este PRD de instalacao: @PRD-INSTALACAO-MCP-EKYTE-CODEX.md
+Executa este PRD de instalacão: @PRD-INSTALAcão-MCP-EKYTE-CODEX.md
 ```
 
-O PRD cobre instalacao local, instalacao remota, registro da MCP e copia da skill.
+O PRD cobre instalacão local, instalacão remota, registro da MCP e copia da skill.
 
 ### Registro local global
 
@@ -117,14 +117,14 @@ Arquivos:
 - `codex/skills/ekyte/SKILL.md`
 - `codex/skills/ekyte/reference.md`
 
-Instalacao global no Windows:
+Instalacão global no Windows:
 
 ```powershell
 New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.codex\skills" | Out-Null
 Copy-Item -Recurse codex\skills\ekyte "$env:USERPROFILE\.codex\skills\"
 ```
 
-Instalacao global no Linux/macOS:
+Instalacão global no Linux/macOS:
 
 ```bash
 mkdir -p ~/.codex/skills
@@ -139,7 +139,7 @@ Build da imagem:
 docker build -t ekyte-mcp-server .
 ```
 
-Execucao:
+Execucão:
 
 ```bash
 docker run -d --name ekyte-mcp-server \
@@ -205,7 +205,7 @@ Company ID:
 
 - Veja o numero no caminho da request: `/api/companies/XXXX/...`.
 
-## Seguranca
+## Segurança
 
 - Nunca commite `.env`, tokens ou configs locais com credenciais.
 - Trate `EKYTE_BEARER_TOKEN` como senha.
